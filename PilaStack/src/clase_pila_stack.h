@@ -10,14 +10,14 @@
 
 class Pila{
 private:
-	char *arreglo[] ;
+	char *arreglo;
 	int contador;
 	int capacidad;
 public:
-
+	const int CAPACIDAD_INICIAL = 30;
 	Pila();
 	~Pila();
-	Pila Pop();
+	char Pop();
 	void Push(char k);
 	int size();
 	bool isEmpty();
