@@ -5,12 +5,11 @@
  *      Author: Daniel
  */
 
-
 #include "clase_pila_stack.h"
 #include <iostream>
 using namespace std;
 
-const int CAPACIDAD_INICIAL = 30;
+
 
 Pila::Pila()
 {
@@ -31,13 +30,14 @@ void Pila::Push(char k)
 	arreglo[contador++]= k;
 }
 
-Pila Pila::Pop()
+char Pila::Pop()
 {
-	if(isEmpty)
+	if(isEmpty())
 	{
 		"error ya que intenta abrir una pila vacia";
 	}
-	return arreglo [--contador];
+
+	return arreglo[ --contador];
 }
 int Pila::size()
 {
